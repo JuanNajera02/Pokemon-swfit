@@ -1,6 +1,6 @@
 import Swift
 
-public class pelear {
+public class Pelea {
 
     private var ganador: Int = 0
     private var danoHecho: Int = 0
