@@ -27,6 +27,7 @@ public class Pokemon {
 	}
 
 
+
 	// obtener estadisticas
 	internal func obtenerEstadisticas() -> String {
 		var str: String = ""
