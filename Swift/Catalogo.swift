@@ -21,7 +21,7 @@ public class Catalogo {
     }
 
     //Mostrar el total de pokemon existentes en el juego
-    public func mostrarTotalPokemon() -> Int {
+    public func obtenerTotalPokemones() -> Int {
         return self.totalPokemones
     }
 
@@ -37,16 +37,12 @@ public class Catalogo {
     }
 
     //buscar pokemon por tipo
-    public func buscarPokemonPorTipo(tipo: String) -> [Pokemon] {
+    public func buscarPokemonTipo(tipo: String) -> [Pokemon] {
         var pokemon_tipo: [Pokemon] = [Pokemon]()
-        pokemon_tipo.reserveCapacity(totalPokemones)
         
-        var contador: Int = 0
-
         for i in 0...totalPokemones - 1 {
             if tipo == pokemon[i].tipo {
-                pokemons[contador] = pokemon[i]
-                contador += 1
+                pokemon_tipo.append(pokemon[i])
             }
         }
 
@@ -59,7 +55,7 @@ public class Catalogo {
     }
     
     // ver todos los pokemon existentes en el juego (solo el nombre)
-    public func verTodosLosPokemon() -> String {
+    public func verPokemon() -> String {
         var str: String = ""
 
         for i in 0...totalPokemones - 1 {
