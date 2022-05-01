@@ -36,6 +36,7 @@ public class Pokemon {
 		return danioHecho
 	}
 
+
 	// obtener estadisticas
 	internal func obtenerEstadisticas() -> String {
 		var str: String = ""
