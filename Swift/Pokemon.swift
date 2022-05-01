@@ -25,7 +25,16 @@ public class Pokemon {
 		self.fuerteContra = fuerteContra
 		self.debilContra = debilContra
 	}
-
+	internal func atacar(pokeDanado: Pokemon) -> Int {
+		var danioHecho = (self.ataque + 10 ) * self.nivel - pokeDanado.defensa	 * pokeDanado.nivel
+		if self.fuerteContra == pokeDanado.tipo {
+			danioHecho *= 2
+		}
+		if self.debilContra == pokeDanado.tipo {
+			danioHecho -= 2
+		}
+		return danioHecho
+	}
 
 	// obtener estadisticas
 	internal func obtenerEstadisticas() -> String {
@@ -42,6 +51,10 @@ public class Pokemon {
 		str += "Debil Contra: \(self.debilContra)\n"
 
 		return str
+	}
+
+	func subirNivel(){
+		self.nivel += 1
 	}
 
 
