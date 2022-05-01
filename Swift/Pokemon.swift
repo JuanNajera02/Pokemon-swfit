@@ -11,7 +11,7 @@ public class Pokemon {
 	internal var ataque: Int
 	internal var defensa: Int
 	internal var fuerteContra: String
-	prointernaltected var debilContra: String
+	internal var debilContra: String
 
 	//constructor
 	public init(nombre: String, vida: Int, vidaTotal: Int, nivel: Int, tipo: String, ataque: Int, defensa: Int, fuerteContra: String, debilContra: String) {
@@ -54,7 +54,7 @@ public class Pokemon {
 		return str
 	}
 
-	func subirNivel(){
+	public func subirNivel(){
 		self.nivel += 1
 	}
 

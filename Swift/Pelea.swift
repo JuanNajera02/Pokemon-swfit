@@ -12,7 +12,7 @@ public class Pelea {
             danoHecho = miPoke.atacar(pokeSalvaje)
             pokeSalvaje.vida -= danoHecho
         } else {
-            danoHecho = pokeSalvaje.atacar(miPoke)
+            danoHecho = pokeSa  lvaje.atacar(miPoke)
             miPoke.vida -= danoHecho
         }
         if(miPoke.vida <= 0) ganador = 2

@@ -14,7 +14,7 @@ public class Planta:Pokemon {
             self.apodo = apodo
         }
 
-        override public String obtenerEstadisticas() {
+        override public obtenerEstadisticas() -> String {
             return "Mote: \(self.apodo)\n" + super.obtenerEstadisticas();
         }
     

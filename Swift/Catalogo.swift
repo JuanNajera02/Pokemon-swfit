@@ -59,7 +59,8 @@ public class Catalogo {
         var str: String = ""
 
         for i in 0...totalPokemones - 1 {
-            str += pokemon[i].nombre + "\n"
+            // str = "1: " + pokemon[0].nombre + "\n2: " + pokemon[1].nombre + "\n3: " + pokemon[2].nombre;
+            str += "\(i + 1): " + pokemon[i].nombre + "\n"
         }
         
         return str
