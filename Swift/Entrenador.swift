@@ -1,8 +1,5 @@
 import Swift
 
-// CREATE A CLASS PUBLIC CALL Entrenador
-
-
 public class Entrenador {
     private nombre:String
     public miPokedex:Pokedex 
