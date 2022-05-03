@@ -1,8 +1,8 @@
 import Swift
 
 public class Entrenador {
-    private nombre:String
-    public miPokedex:Pokedex 
+    private var nombre:String
+    public var miPokedex:Pokedex 
 
     //constructor
     public init(nombre: String) {
@@ -16,8 +16,11 @@ public class Entrenador {
 
     public func caminar() -> Bool {
         // crea un numero aleatorio entre 1 y 100
-        let probabilidad:Int = Int(arc4random_uniform(100))
-        return probabilidad >= 50
+        let probabilidad:Int =  Int.random(in: 1...100)
+        if probabilidad >= 50{
+            return true
+        }
+        return false
     }
 
     public func elegirPokemon(posicion:Int) -> Pokemon{
@@ -27,9 +30,12 @@ public class Entrenador {
     public func curarPokemon(miPokemon:Pokemon){
         miPokemon.vida = miPokemon.vidaTotal
     }
-    public func atrapar(){
-        let probabilidad:Int = Int(arc4random_uniform(100))
-        return probabilidad>= 50
+    public func atrapar() -> Bool {
+        let probabilidad:Int =  Int.random(in: 1...100)
+        if probabilidad >= 50{
+            return true
+        }
+        return false
     }
     
 }

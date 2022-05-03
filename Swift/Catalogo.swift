@@ -3,8 +3,8 @@ import Swift
 public class Catalogo {
 
     private var totalPokemones: Int = 3
-    public var pokemon: [Pokemon] = [Pokemon]()
-    pokemon.reserveCapacity(totalPokemones)
+    // declaracion de arreglo de pokemon
+    private var pokemon: [Pokemon] = []
 
 
     //constructor
@@ -14,10 +14,9 @@ public class Catalogo {
         let pok2: Pokemon = Agua("BLASTOISE")
         let pok3: Pokemon = Planta("VENUSAUR")
 
-        pokemon[0] = pok1
-        pokemon[1] = pok2
-        pokemon[2] = pok3
-
+        self.pokemon.append(pok1)
+        self.pokemon.append(pok2)
+        self.pokemon.append(pok3)
     }
 
     //Mostrar el total de pokemon existentes en el juego
@@ -51,7 +50,8 @@ public class Catalogo {
 
     //si el pokemon existe, devolverlo
     public func buscarPokemon(i: Int) -> Pokemon {
-        return pokemon[i]
+
+        return self.pokemon[i]
     }
     
     // ver todos los pokemon existentes en el juego (solo el nombre)
@@ -60,7 +60,7 @@ public class Catalogo {
 
         for i in 0...totalPokemones - 1 {
             // str = "1: " + pokemon[0].nombre + "\n2: " + pokemon[1].nombre + "\n3: " + pokemon[2].nombre;
-            str += "\(i + 1): " + pokemon[i].nombre + "\n"
+            str += "\(i + 1): " + self.pokemon[i].nombre + "\n"
         }
         
         return str

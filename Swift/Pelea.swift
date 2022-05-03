@@ -1,5 +1,4 @@
 import Swift
-
 public class Pelea {
 
     private var ganador: Int = 0
@@ -12,11 +11,16 @@ public class Pelea {
             danoHecho = miPoke.atacar(pokeSalvaje)
             pokeSalvaje.vida -= danoHecho
         } else {
-            danoHecho = pokeSa  lvaje.atacar(miPoke)
+            danoHecho = pokeSalvaje.atacar(miPoke)
             miPoke.vida -= danoHecho
         }
-        if(miPoke.vida <= 0) ganador = 2
-        if(pokeSalvaje.vida <= 0) ganador = 1
+        if(miPoke.vida <= 0) {
+            ganador = 2
+        }
+        if(pokeSalvaje.vida <= 0){
+
+        ganador = 1
+        } 
     
     }
 
@@ -27,7 +31,11 @@ public class Pelea {
 
     //funcion genera numero 1 o 2 aleatorio
     public func lanzarMoneda() -> Int {
-        let numero = Int(arc4random_uniform(2))
+        //genera numero aleatorio entre 1 y 2
+
+
+        let numero = Int.random(in: 1...2)
+
         return numero
     }
 
